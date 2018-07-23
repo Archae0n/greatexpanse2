@@ -201,6 +201,8 @@ country_event = {
 						}
 						change_pc = pc_arid
 					}
+					
+					
 					if = { #DESERT
 						limit = {
 							ROOT = {
@@ -289,6 +291,215 @@ country_event = {
 						}
 						change_pc = pc_alpine
 					}
+					if = { #Glacial
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_glacial_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_glacial
+							}
+						}
+						change_pc = pc_glacial
+					}
+					if = { #Glacial
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_glacial_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_glacial
+							}
+						}
+						change_pc = pc_glacial
+					}
+					if = { Frozen_Desert
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_frozen_desert_preference
+							}
+							NOT = { #Just in case the planet class isn't already Frozen Desert
+								is_planet_class = pc_frozen_desert
+							}
+						}
+						change_pc = pc_frozen_desert
+					}
+					if = { #Steppe
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_steppe_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_steppe
+							}
+						}
+						change_pc = pc_steppe
+					}
+					if = { #Hadesert
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_hadesert_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_hadesert
+							}
+						}
+						change_pc = pc_hadesert
+					}
+					if = { #Antarctic
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_antarctic_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_antarctic
+							}
+						}
+						change_pc = pc_antarctic
+					}
+					if = { #sandsea
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_sandsea_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_sandsea
+							}
+						}
+						change_pc = pc_sandsea
+					}
+					if = { #subarctic
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_subarctic_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_subarctic
+							}
+						}
+						change_pc = pc_subarctic
+					}
+					if = { #Geothermal
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_geothermal_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_geothermal
+							}
+						}
+						change_pc = pc_geothermal
+					}
+					if = { #Cascadian
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_cascadian_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_cascadian
+							}
+						}
+						change_pc = pc_cascadian
+					}
+					if = { #Swamp
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_swamp_preference
+							}
+							NOT = { #Just in case the planet class isn't already Glacial
+								is_planet_class = pc_swamp
+							}
+						}
+						change_pc = pc_swamp
+					}
+					if = { #Mangrove
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_mangrove_preference
+							}
+							NOT = { 
+								is_planet_class = pc_mangrove
+							}
+						}
+						change_pc = pc_mangrove
+					}
+					if = { #DesertIslands
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_desertislands_preference
+							}
+							NOT = { 
+								is_planet_class = pc_desertislands
+							}
+						}
+						change_pc = pc_desertislands
+					}
+					if = { #Mesa is best Waifuframe
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_mesa_preference
+							}
+							NOT = { 
+								is_planet_class = pc_mesa
+							}
+						}
+						change_pc = pc_mesa
+					}
+					if = { #Oasis
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_oasis_preference
+							}
+							NOT = { 
+								is_planet_class = pc_oasis
+							}
+						}
+						change_pc = pc_oasis
+					}
+					if = { #HaJungle
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_hajungle_preference
+							}
+							NOT = { 
+								is_planet_class = pc_hajungle
+							}
+						}
+						change_pc = pc_hajungle
+					}
+					if = { #Methane
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_methane_preference
+							}
+							NOT = { 
+								is_planet_class = pc_methane
+							}
+						}
+						change_pc = pc_methane
+					}
+					if = { #Ammonia
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_ammonia_preference
+							}
+							NOT = { 
+								is_planet_class = pc_ammonia
+							}
+						}
+						change_pc = pc_ammonia
+					}
+					if = { #Voidborne, For Habitat Civs
+						limit = {
+							ROOT = {
+								has_trait = trait_pc_habitat_preference
+							}
+							NOT = { 
+								is_planet_class = pc_habitat
+							}
+						}
+						change_pc = pc_habitat
+					}
 					if = { #??? - We can't work out the habitability, so make it a Gaia World.
 						limit = {
 							ROOT = {
@@ -315,25 +526,25 @@ country_event = {
 				remove_blocker = yes
 			}
 			
-			if = { #We want at least 16 tiles on our planet
+			if = { #We want at least 18 tiles on our planet
 				limit = {
-					planet_size < 16
+					planet_size < 18
 				}
 				while = {
 					limit = {
-						planet_size < 16
+						planet_size < 18
 					}
 					change_planet_size = 1
 				}
 			}
 				
-			if = { #We want less than 26 tiles on our planet
+			if = { #We want 18 tiles on the planet, for balance
 				limit = {
-					planet_size > 25
+					planet_size > 18
 				}
 				while = {
 					limit = {
-						planet_size > 25
+						planet_size > 18
 					}
 					change_planet_size = -1
 				}
@@ -554,13 +765,14 @@ country_event = {
 			
 			while = {
 				limit = {
-					num_pops < 3
+					num_pops < 4
 				}
 				create_pop = {
 					species = owner
 					ethos = owner
 				}
 			}
+			generate_start_buildings_and_blockers = true
 		}
 	}
 }
