@@ -302,17 +302,6 @@ country_event = {
 						}
 						change_pc = pc_glacial
 					}
-					if = { #Glacial
-						limit = {
-							ROOT = {
-								has_trait = trait_pc_glacial_preference
-							}
-							NOT = { #Just in case the planet class isn't already Glacial
-								is_planet_class = pc_glacial
-							}
-						}
-						change_pc = pc_glacial
-					}
 					if = { Frozen_Desert
 						limit = {
 							ROOT = {
@@ -513,6 +502,23 @@ country_event = {
 									has_trait = trait_pc_savannah_preference
 									has_trait = trait_pc_desert_preference
 									has_trait = trait_pc_arid_preference
+									has_trait = trait_pc_glacial_preference
+									has_trait = trait_pc_frozen_desert_preference
+									has_trait = trait_pc_steppe_preference
+									has_trait = trait_pc_hadesert_preference
+									has_trait = trait_pc_antarctic_preference
+									has_trait = trait_pc_subarctic_preference
+									has_trait = trait_pc_sandsea_preference
+									has_trait = trait_pc_geothermal_preference
+									has_trait = trait_pc_cascadian_preference
+									has_trait = trait_pc_swamp_preference
+									has_trait = trait_pc_mangrove_preference
+									has_trait = trait_pc_mesa_preference
+									has_trait = trait_pc_desertislands_preference
+									has_trait = trait_pc_hajungle_preference
+									has_trait = trait_pc_methane_preference
+									has_trait = trait_pc_ammonia_preference
+									has_trait = trait_pc_habitat_preference
 								}
 							}
 						}
@@ -756,12 +762,13 @@ country_event = {
 					}
 				}
 			}
-			
+
 			create_colony = { #The planet is ready - make a colony!
 				owner = root
 				species = owner_main_species
 				ethos = owner
 			}
+			reset_start_buildings_and_blockers_life_seeded = yes			
 			
 			while = {
 				limit = {
@@ -772,7 +779,6 @@ country_event = {
 					ethos = owner
 				}
 			}
-			generate_start_buildings_and_blockers = true
 		}
 	}
 }
